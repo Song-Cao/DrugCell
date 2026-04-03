@@ -133,7 +133,7 @@ class drugcell_nn(nn.Module):
 		gene_input = x.narrow(1, 0, self.gene_dim)
 		drug_input = x.narrow(1, self.gene_dim, self.drug_dim)
 
-		# define forward function for genotype dcell #############################################
+		# define forward function for genotype dcell ##############################################
 		term_gene_out_map = {}
 
 		for term, _ in self.term_direct_gene_map.items():
