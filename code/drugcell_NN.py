@@ -58,7 +58,7 @@ class drugcell_nn(nn.Module):
 			self.term_dim_map[term] = num_output
 
 
-	# build a layer for forwarding gene that are directly annotated with the term
+	# build a layer for forwarding genes that are directly annotated with the term
 	def contruct_direct_gene_layer(self):
 		
 		for term, gene_set in self.term_direct_gene_map.items():
