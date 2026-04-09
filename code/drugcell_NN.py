@@ -83,7 +83,7 @@ class drugcell_nn(nn.Module):
 			input_size = self.num_hiddens_drug[i]
 
 
-	# start from bottom (leaves), and start building a neural network using the given ontology
+	# start from the bottom (leaves), and start building a neural network using the given ontology
 	# adding modules --- the modules are not connected yet
 	def construct_NN_graph(self, dG):
 
