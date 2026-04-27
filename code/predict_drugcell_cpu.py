@@ -57,7 +57,7 @@ def predict_dcell(predict_data, gene_dim, drug_dim, model_file, hidden_folder, b
 	test_corr = pearson_corr(test_predict, predict_label)
 	print("Test pearson corr\t%s\t%.6f" % (model.root, test_corr))
 
-	np.savetxt(result_file+'/drugcell.predict', test_predict.numpy(),'%.4e')
+	np.savetxt(f'{result_file}/drugcell.predict', test_predict.numpy(),'%.4e')
 
 
 
