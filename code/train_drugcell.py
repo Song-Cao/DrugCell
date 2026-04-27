@@ -14,7 +14,7 @@ import numpy as np
 import time
 
 
-# build mask: matrix (nrows = number of relevant gene set, ncols = number all genes)
+# build mask: matrix (nrows: number of relevant gene set, ncols: number all genes)
 # elements of matrix are 1 if the corresponding gene is one of the relevant genes
 def create_term_mask(term_direct_gene_map, gene_dim):
 
@@ -95,7 +95,7 @@ def train_model(root, term_size_map, term_direct_gene_map, dG, train_data, gene_
 				loss = nn.MSELoss()
 				if name == 'final':
 					total_loss += loss(output, cuda_labels)
-				else: # change 0.2 to smaller one for big terms
+				else: # change 0.2 to a smaller value for big terms
 					total_loss += 0.2 * loss(output, cuda_labels)
 
 			total_loss.backward()
