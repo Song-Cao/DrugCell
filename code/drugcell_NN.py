@@ -20,13 +20,13 @@ class drugcell_nn(nn.Module):
 		self.num_hiddens_genotype = num_hiddens_genotype
 		self.num_hiddens_drug = num_hiddens_drug
 		
-		# dictionary from terms to genes directly annotated with the term
+		# dictionary from terms to genes directly annotated with term
 		self.term_direct_gene_map = term_direct_gene_map   
 
-		# calculate the number of values in a state (term): term_size_map is the number of all genes annotated with the term
+		# calculate the number of values in a state (term): term_size_map is the number of all genes annotated with term
 		self.cal_term_dim(term_size_map)		   
 		
-		# ngenes, gene_dim are the number of all genes	
+		# ngenes, gene_dim both are the number of all genes	
 		self.gene_dim = ngene			   
 		self.drug_dim = ndrug
 
